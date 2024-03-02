@@ -1,0 +1,17 @@
+{
+  "name": "mongo-app",
+  "version": "1.0.0",
+  "description": "Mongo app - UTN",
+  "main": "./server/index.js",
+  "type": "module",
+  "scripts": {
+    "server": "node ./server/index.js",
+    "client": "node ./client/client"
+  },
+  "keywords": [],
+  "author": "Kevin",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
