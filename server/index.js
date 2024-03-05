@@ -8,7 +8,9 @@ const serverTCP = net.createServer();
 
 serverTCP.on("connection" , (socket) => {
 
-    socket.on("data" , () => {
+    socket.on("data" , (bufferData) => {
+        const data = JSON.parse(bufferData.toString());
+        console.log(data);
 
     })
     
@@ -18,7 +20,7 @@ serverTCP.on("connection" , (socket) => {
     })
 
     socket.on("error" , () => {
-        console.log("Client error ");
+        console.log("Client errorr ");
 
     })
 
@@ -29,3 +31,4 @@ serverTCP.on("connection" , (socket) => {
 serverTCP.listen(port,() => {
     console.log(`Server is up on server port ${port} - ${new Date().toLocaleString()} `);
 });
+
